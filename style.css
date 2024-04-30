@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav{
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    
+}
+
+#nav> h1{
+    font-size: 30px;
+    font-weight: 100;
+}
+
+#nav #part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav #part2 a{
+    text-decoration: none;
+    color: black;
+    margin: 20px;
+}
+
+#nav #part2 a:nth-last-child(1){
+    overflow: hidden;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid black;
+    position: relative;
+}
+
+#nav #part2 a:nth-last-child(1) #green{
+    width: 100%;
+    height: 100%;
+    background-color: greenyellow;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: left 0.4s ease-in-out;
+}
+
+#nav #part2 a:nth-last-child(1) h5{
+    font-weight: 400;
+    font-size: 20px;
+    color: black;
+    position: relative;
+    z-index: 99;
+}
+
+#nav #part2 a:nth-last-child(1):hover #green{
+    left: 0;
+}
+
+#main>h1{
+    font-size: 6vw;
+    width: 60%;
+    text-align: center;
+    position: relative; 
+    z-index: 99;
+}
+
+#main>h1::after{
+    content: "";
+    position: absolute;
+    bottom: -5%;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 50%;
+    height: 16px;
+    background-image: url(https://thisisdigital.co.uk/dist/images/underline-green.svg);
+    
+}
+
+#main #img1{
+    height: 400px;
+    width: 260px;
+    position: absolute;
+    left: 13%;
+    top: 20%;
+    
+}
+
+#main #img2{
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    right: 25%;
+    top: 10%;
+    animation: grk 3s infinite;
+    animation-timing-function: linear;
+    border-radius: 5px;
+}
+
+@keyframes grk{
+    from{
+        transform: scale(2);
+    }
+
+    to{
+        transform: scale(1.2);
+    }
+}
+
+#main #img3{
+    height: 210px;
+    width: 200px;
+    position: absolute;
+    right: 7%;
+    bottom: 6%;
+}
+
+@media(max-width: 31.25em){
+    #main #part2{
+       width: 50%;
+
+    }
+
+    #main #nav h1{
+        
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+    }
+
+    #main #part2 a{
+        display: none;
+    }
+
+    html{
+        overflow-y: hidden;
+        overflow-y: hidden;
+    }
+
+    #main .title{
+        margin-right: 40px;
+        font-size: 50px;
+        font-weight: 900;
+        letter-spacing: 5px;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: rgb(252, 240, 240);
+        color: transparent;
+
+    }
+
+    #main #img1{
+        display: none;
+    }
+
+    #main #img2{
+        box-shadow: 10px 10px 20px red;
+    }
+
+
+
+    
+}
